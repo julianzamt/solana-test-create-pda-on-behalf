@@ -9,13 +9,9 @@ There are two different ways to invoke a TX from within a program (cpi): either 
 - invoke (which will be signed by the signers of the original tx)
 - invoke_signed (which adds to the original signers a pda that acts as prove of the caller signing the tx as well).
 
-With invoke, since an account must sign its own creation, it is not possible because because a PDA has no private key, 
-thus cannot sign the original tx.
+With invoke, since an account must sign its own creation, it is not possible because a PDA has no private key, thus cannot sign the original tx.
 
-With invoke_signed, again the PDA to be created on behalf cannot be the one that signs. 
-This is because its pubkey is obtained using Receiver program as programId, and invoke_signed 
-enforces that the signing PDA is derived from the caller id.
-
+With invoke_signed, again the PDA to be created on behalf cannot be the one that signs. This is because its pubkey is obtained using Receiver program as programId, and invoke_signed enforces that the signing PDA is derived from the caller program id.
 
 ## Usage
 Pre-Requirements:
