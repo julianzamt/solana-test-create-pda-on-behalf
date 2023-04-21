@@ -1,7 +1,7 @@
 # solana-create-pda-on-behalf
 This repo was created to test that a pda account cannot be created from on program on behalf of another.
 
-Spoiler: It is NOT possible.
+> Spoiler: It is **NOT** possible.
 
 An account must sign its own creation, next to the account that will debited.
 
